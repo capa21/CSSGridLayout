@@ -1,0 +1,5 @@
+Posicionando Grid-Items:
+Áreas nombradas
+. Dos nuevas propiedades:
+    Contenedor  -> grid-template-areas
+    Items       -> grid-area

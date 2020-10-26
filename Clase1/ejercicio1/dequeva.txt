@@ -1,0 +1,4 @@
+display: grid;
+
+Sí pasan cosas con solo colocar esta sentencia. Aunque gráficamente, aparentemente no pasara nada como en flexbox,
+sí pasan cosas, entre ellas, el contenedor pasa a ser inmediatamente un grid. (ver en firefox developer edition)

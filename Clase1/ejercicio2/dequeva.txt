@@ -1,0 +1,5 @@
+grid-template-columns:
+grid-template-rows
+gap
+fr: Fraction Unit => Nueva medida en CSS mucho más flexible. Fr, en el fondo, es el espacio disponible. "Repartete el espacio disponible"*/
+grid-auto-rows: //Para especificar el comportamiento del tamaño de las filas que están fuera de la indicación explícita */

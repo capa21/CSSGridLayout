@@ -1,0 +1,81 @@
+/*Definiendo tracks*/
+body{
+	background-color: rgba(0,0,0,.2);
+	font: 3rem sans-serif;
+	color: white;
+}
+.grid-item:nth-child(2n) {
+    background-color: #1A83B5;
+}
+.grid-item:nth-child(2n+1) {
+    background-color: #37A8E0;
+}
+
+.grid {
+    padding: 1rem;
+}
+
+.grid-item {
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/*****************************************/
+.grid {
+    display: grid;
+    gap: 0.5rem;
+
+    /*Recodemos que al repeat se le pasa el número de columnas a repetir y la medida*/
+    grid-template-columns: repeat(3, 1fr);
+    
+    /* Haciendo uso del auto-fill, se le pasa al repeat la medida, y él coloca automáticamente el número de columnas
+    dependiendo del ancho del contenedor. 
+    Con solo esta línea tenemos un layout responsive, aunque con un pequeño hueco a la derecha*/
+    grid-template-columns: repeat(auto-fill, 15rem);   
+
+    /*Se puede hacer con auto-fit y es lo mismo*/
+    grid-template-columns: repeat(auto-fit, 15rem);
+
+     /*Ahora haciendo uso del minmax tenemos un layout Flexible y 100% resoponsive*/
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr) );
+    
+    /*Si se tienen varios track list (se construyen con el repeat) solo uno de ellos puede tener auto-fill / auto-fit*/
+    grid-template-columns: repeat(2, minmax(8rem, 1fr)) repeat(auto-fill, minmax(15rem, 2fr));
+    
+    /*Cuando en el minmax se colocan las dos medidas fijas tiene un cuenta el max todo el tiempo*/
+    grid-template-columns: repeat(auto-fill, minmax(5rem, 200px));
+
+    /*Igual al anterior pero sin minmax*/
+    grid-template-columns: repeat(auto-fill, 80px 120px);
+
+    /****** Diferencia entre auto-fill y auto-fit******/
+    /*Hasta aquí hacen lo mismo*/
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    /*¿En qué se diferencian entonces?
+      R/ Cuando no tengo ítems suficientes para rellenar el ancho, el autofit ocupa ese espacio distribuyendo las columnas
+      indicadas. auto-fill genera los tracks pero los deja vacíos.
+      En teoría, por defecto, deberíamos usar auto-fit.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    /*Paquete de tracks*/
+    grid-template-columns: repeat(auto-fill, 120px 180px);
+    
+    /*Ojo, no se puede tener fr dentro del repeat, fuera del minmax*/
+    grid-template-columns: repeat(auto-fill, 120px 1fr);
+
+    /*Pero sí puede usarse dentro de un minmax*/
+    grid-template-columns: repeat(auto-fill, 150px minmax(100px, 1fr));
+
+    /*Tener en cuenta el auto para que sea flexible ante el contenido, sobretoo para aquellas filas o columnas que aparecen
+    de manera no controlada */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-auto-rows: minmax(10rem, auto);
+}
+
+
+
+

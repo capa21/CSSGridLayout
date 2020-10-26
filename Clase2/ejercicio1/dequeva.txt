@@ -1,0 +1,7 @@
+auto-fill / auto-fit
+relleno automático / ajuste automático
+
+Estas son keywords que se pueden aplicar a la función repeat. 
+No se pueden usar de manera pura con valores flexibles (fr, auto)
+
+Si se tienen varios track list (se construyen con el repeat) solo uno de ellos puede tener auto-fill / auto-fit

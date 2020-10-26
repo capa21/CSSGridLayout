@@ -1,0 +1,29 @@
+.migrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.amarillo {
+    background-color:#a89332 ;
+}
+.azul {
+    background-color: blue;
+}
+
+.rojo {
+    background-color: red;
+}
+
+.verde {
+    background-color: green;
+}
+.morado {
+    background-color: purple;
+}
+
+.naranja {
+    background-color: orange;
+}
+
+.texto-blanco {
+    color: white;
+}

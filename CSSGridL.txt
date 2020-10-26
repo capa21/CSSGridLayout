@@ -1,0 +1,61 @@
+. Maquetación ágil y dinámica
+. Especificación estándar de CSS (no requiere uso de frameworks)
+. Una vez dominado, permite maquetar layaous complejos con gran facilidad
+. Soportado por todos los navedadores actuales
+. Se puede usar poliffill para navegadores bastante antiguos
+
+¿Qué tiene de diferente?
+
+. Voy a poder colocar los ítems DONDE QUIERA...
+. ...PERO habrá ítems que SE COLOQUEN SOLOS (AUTO-PLACEMENT)
+. Puede HACER LO MISMO DE MUCHAS FORMAS...
+. ...PERO NO TODAS HACEN LO MISMO.
+. Controlo las 2 dimensiones,  NO ES FLEXBOX.
+. La colocación de los ítems es muy libre, NO ES UNA TABLA.
+. Tiene una EXTENSA SINTAXIS.
+. Nos va a volver un poco locos, pero VA A CAMBIAR EL CSS PARA SIEMPRE.
+
+Conceptos Básicos
+. Grid Line
+. Grid Cell
+. Grid Track (Row)
+. Grid Track (Colum)
+. Grid Area 
+
+display: grid;
+
+Sí pasan cosas con solo colocar esta sentencia. Aunque gráficamente, aparentemente no pasara nada como en flexbox,
+sí pasan cosas, entre ellas, el contenedor pasa a ser inmediatamente un grid. (ver en firefox developer edition)
+
+grid-template-columns:
+grid-template-rows
+gap
+fr: Fraction Unit => Nueva medida en CSS mucho más flexible. Fr, en el fondo, es el espacio disponible. "Repartete el espacio disponible"*/
+grid-auto-rows: //Para especificar el comportamiento del tamaño de las filas que están fuera de la indicación explícita */
+
+minmax
+repeat
+
+-----------------
+Posicionar items
+
+grid-column-start: 2;
+grid-column-end: 4;
+
+grid-row-start: 3;
+grid-row-end: 5;
+
+grid-column: 2/4;
+grid-row: 3/5;
+
+grid-area: 1/2/3/span 3;
+--
+Ejercicio de las 12 columnas
+Ejercicio de construcción de Layout
+
+Posicionando Grid-Items:
+Líneas Nombradas
+
+. Ayudan a recordar cómo van los tracks en layouts complejos.
+. En RESPONSIVE evitan sobreescribir la colocación de algunos Items
+. Si cambia el número de tracks NO TENGO QUE REPOSICIONAR TODOS LOS ELEMENTOS

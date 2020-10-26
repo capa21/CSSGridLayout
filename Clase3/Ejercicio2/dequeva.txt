@@ -1,0 +1,6 @@
+Posicionando Grid-Items:
+Líneas Nombradas
+
+. Ayudan a recordar cómo van los tracks en layouts complejos.
+. En RESPONSIVE evitan sobreescribir la colocación de algunos Items
+. Si cambia el número de tracks NO TENGO QUE REPOSICIONAR TODOS LOS ELEMENTOS
